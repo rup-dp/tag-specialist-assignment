@@ -15,7 +15,7 @@ This is a minimal HTML/JavaScript form to demonstrate Google Tag Manager integra
 - Simple form with fields: **Name**, **Age**, **Occupation**, and **Annual Income**
 - Qualification logic:
   - Age ≥ 25
-  - Income ≥ $40,000
+  - Income < $40,000
   - Occupation ≠ “Student”
 - Pushes a custom event to `dataLayer` on form submission:
   - `offer_qualified` if the user meets criteria
