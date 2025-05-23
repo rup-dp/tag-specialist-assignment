@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offer Qualification Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f8f8f8;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 0.5rem 0;
+    }
+    #statusMsg {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- Insert GTM Container Here -->
+  <!-- Example: <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXXX"></script> -->
+
+</head>
+<body>
+  <div class="container">
+    <h1>Check Your Offer Eligibility</h1>
+    <form id="qualForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="number" id="age" placeholder="Age" required />
+      <input type="text" id="occupation" placeholder="Occupation" required />
+      <input type="number" id="income" placeholder="Annual Income (USD)" required />
+      <button type="submit">Check Eligibility</button>
+    </form>
+    <p id="statusMsg"></p>
+  </div>
+
+  <script>
+    document.getElementById('qualForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const age = parseInt(document.getElementById('age').value);
+      const occupation = document.getElementById('occupation').value.trim().toLowerCase();
+      const income = parseInt(document.getElementById('income').value);
+
+      const qualified = age >= 25 && income <= 4000 && occupation !== 'student';
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: qualified ? 'offer_qualified' : 'offer_not_qualified',
+        name,
+        age,
+        occupation,
+        income
+      });
+
+      document.getElementById('statusMsg').innerText = qualified
+        ? '✅ You may qualify! We’ll be in touch.'
+        : '❌ Sorry, you do not qualify for this offer.';
+    });
+  </script>
+</body>
+</html>
