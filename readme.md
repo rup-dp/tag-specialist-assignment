@@ -6,7 +6,8 @@ This is a minimal HTML/JavaScript form to demonstrate Google Tag Manager integra
 
 ## 🚀 Live Demo
 
-👉 [Host it on Netlify](https://www.netlify.com/) or run locally by opening `index.html` in your browser.
+👉 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rup-dp/tag-specialist-assignment)
+ or run locally by opening `index.html` in your browser.
 
 ---
 
