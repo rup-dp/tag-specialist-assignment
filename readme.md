@@ -1,33 +1,26 @@
 # 🎯 GTM Qualification Form Demo
 
-This is a minimal HTML/JavaScript form to demonstrate Google Tag Manager integration and conditional event triggering based on user input. It’s designed as a take-home assignment for a Marketing Automation & Tagging Specialist role.
+This is a minimal HTML/JavaScript form to demonstrate Google Tag Manager (GTM) integration and conditional event triggering based on user input. It’s designed as a take-home assignment for a Marketing Automation & Tagging Specialist role.
 
 ---
 
-## 🚀 Live Demo
+## 🚀 How to Deploy & Test
 
-👉 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rup-dp/tag-specialist-assignment)
- or run locally by opening `index.html` in your browser.
+You **must deploy this file live** in order to integrate and test GTM correctly.
 
----
+### ✅ Steps to Host
 
-## 🛠 Features
-
-- Simple form with fields: **Name**, **Age**, **Occupation**, and **Annual Income**
-- Qualification logic:
-  - Age ≥ 25
-  - Income < $40,000
-  - Occupation ≠ “Student”
-- Pushes a custom event to `dataLayer` on form submission:
-  - `offer_qualified` if the user meets criteria
-  - `offer_not_qualified` otherwise
+1. Download the `repo` ZIP.
+2. Go to 👉 [https://app.netlify.com/drop](https://app.netlify.com/drop)
+3. Drag and drop the `ZIP FIle` file into the drop area.
+4. Netlify will instantly give you a **live URL**.
 
 ---
 
-## 🧪 GTM Setup
+## 🧪 GTM Setup Instructions
 
-1. **Create a GTM container** at [tagmanager.google.com](https://tagmanager.google.com/)
-2. Replace the dummy GTM script in `<head>` of `index.html` with:
+1. Create a GTM container at [https://tagmanager.google.com/](https://tagmanager.google.com/)
+2. In the `<head>` of the HTML, replace the placeholder with your GTM script:
 
 ```html
 <!-- Google Tag Manager -->
