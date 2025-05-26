@@ -11,7 +11,7 @@ You **must deploy this file live** in order to integrate and test GTM correctly.
 ### ✅ Steps to Host
 
 1. Download the `repo` ZIP.
-2. Sgn in to Netlify Go to 👉 [https://app.netlify.com/drop](https://app.netlify.com/drop)
+2. Sign in to Netlify and Go to 👉 [https://app.netlify.com/drop](https://app.netlify.com/drop)
 3. Drag and drop the `ZIP FIle` file into the drop area.
 4. Netlify will instantly give you a **live URL**.
 
